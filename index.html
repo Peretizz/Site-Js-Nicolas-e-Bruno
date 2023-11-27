@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Jogos Online</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <title>Livraria</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <form id="checkoutForm">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" required>
+    <header>
+        <h1>igg games</h1>
+        <nav>
+            <ul>
+            
+                <li><a href="#">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cards">
+            <section class="cards">
+                <div class="card"> <img src="img/fifa.jpg" alt="jogo 1">
+                    <h2>EA FC 24</h2> <button>Comprar</button>
+                </div>
+                <main>
+                    <section class="cards">
+                        <div class="card"> <img src="img/gta.jpg" alt="jogo 2">
+                            <h2>GTA 5</h2> <button>Comprar</button>
+                        </div>
+                        <main>
+                            <section class="cards">
+                                <div class="card"> <img src="img/mortal_kombat.jpeg" alt="jogo 3">
+                                    <h2>Mortal Kombat</h2> <button>Comprar</button>
+                                </div>
+                                </div>
+                            </section>
+                        </main>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" required>
-
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00" required>
-
-        <label for="phone">Telefone:</label>
-        <input type="tel" id="phone" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(00) 12345-6789" required>
-
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" pattern="\d{5}-\d{3}" placeholder="12345-678" required>
-
-        <button type="button" onclick="validateAndSubmit()">Finalizar Compra</button>
-    </form>
-
-    <button type="button" onclick="calculateTotalSales()">Calcular Total de Vendas</button>
-    <div id="totalSales"></div>
-
-    <script src="script.js"></script>
-    <script>
-        emailjs.init("user_your_emailjs_user_id");
-    </script>
+                        <footer class="footer">
+                            <p>&copy; 2023 Livraria Fantástica | Bruno Falchetti</p>
+                        </footer>
 </body>
+
 </html>
