@@ -36,8 +36,10 @@
             <label for="cep">CEP:</label>
             <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="12345-678" />
            
-            <button type="button" onclick="validarInscricao()">Enviar</button>
+            <button type="button" onclick="validarInscricao()">Enviar</button> 
             <button type="reset">limpar</button>
+            
+              
         </fieldset>
         </form>
         <footer class="footer">
@@ -140,7 +142,10 @@
             var formulario = document.getElementById('formulario');
             formulario.reset();
         }
-        
+        limparDadosNaTela();
+    
+
+   
         </script>
     
   
