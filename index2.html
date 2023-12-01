@@ -38,6 +38,7 @@
            
             <button type="button" onclick="validarInscricao()">Enviar</button> 
             <button type="reset">limpar</button>
+            <button onclick="mostrarTotalLocalStorage()">Mostrar Total do LocalStorage</button>
             
               
         </fieldset>
@@ -101,7 +102,13 @@
             // Enviar para o servidor real
             enviarParaServidorReal(textoCompra);
         }
-
+        function mostrarTotalLocalStorage() {
+            var vendasLocalStorage = localStorage.getItem('vendas');
+            var vendasArray = vendasLocalStorage ? JSON.parse(vendasLocalStorage) : [];
+            var totalLocalStorage = vendasArray.reduce((total, venda) => total + venda, 0);
+            console.log('Total no LocalStorage:', totalLocalStorage);
+        }  
+        
         function enviarParaServidorFicticio(textoCompra) {
             // Lógica de envio para o servidor fictício aqui
             var valorTotalCompra = calcularValorTotalCompra();
